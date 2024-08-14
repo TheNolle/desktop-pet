@@ -1,0 +1,63 @@
+{
+  "name": "desktop-pet",
+  "version": "1.0.0",
+  "description": "A delightful desktop pet that sits on your screen, providing comfort and charm. The pet interacts with you through animations and brings a sense of companionship as you work on your computer.",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Nolly",
+    "email": "nolly.berrebi@gmail.com",
+    "url": "https://thenolle.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thenolle/desktop-pet"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://patreon.com/_nolly"
+  },
+  "bugs": {
+    "url": "https://github.com/thenolle/desktop-pet/issues"
+  },
+  "homepage": "https://github.com/thenolle/desktop-pet#readme",
+  "keywords": [
+    "desktop pet",
+    "electron",
+    "cute",
+    "companion",
+    "animations",
+    "FOSS",
+    "open-source"
+  ],
+  "contributors": [],
+  "scripts": {
+    "build": "tsc",
+    "start": "pnpm run build && electron dist/index.js",
+    "dist": "pnpm run build && electron-builder",
+    "credits": "echo 'Credits: Nolly - https://thenolle.com\nElectron, Electron Builder, Electron Tray'"
+  },
+  "dependencies": {
+    "electron-tray": "^0.1.1",
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/electron-builder": "^2.8.0",
+    "@types/node": "^22.2.0",
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.thenolle.electron.desktop-pet",
+    "productName": "Desktop Pet",
+    "files": [
+      "dist/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  }
+}
